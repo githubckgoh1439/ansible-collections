@@ -1,0 +1,19 @@
+- name: Creating create_filepath user group
+  group: name="{{groupId}}"
+  become: true
+
+- name: Creating create_filepath user
+  user:
+    name: "{{userId}}"
+    group: "{{groupId}}"
+    system: yes
+    shell: "/sbin/nologin"
+    comment: "{{userId}} nologin User"
+    createhome: "no"
+    state: present
+
+# This playbook CREATE A NEW FILEPATH under '/tmp/ansible_new_filepath/'
+- name: Create new filepath of '/tmp/ansible_new_filepath/'
+  file:
+    path: '/tmp/ansible_new_filepath/'
+    state: directory

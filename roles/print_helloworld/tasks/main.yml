@@ -1,0 +1,18 @@
+- name: Creating print_helloworld user group
+  group: name="{{groupId}}"
+  become: true
+
+- name: Creating print_helloworld user
+  user:
+    name: "{{userId}}"
+    group: "{{groupId}}"
+    system: yes
+    shell: "/sbin/nologin"
+    comment: "{{userId}} nologin User"
+    createhome: "no"
+    state: present
+
+# This playbook prints hello world message
+- name: Print hello world message
+  debug:
+    msg: Hi, Hello-world-2023 !!!

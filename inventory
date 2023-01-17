@@ -1,0 +1,17 @@
+[print_helloworld]
+remoteIP ansible_ssh_private_key_file=/home/loginID/.ssh/id_rsa.pub
+
+[create_filepath]
+remoteIP ansible_ssh_private_key_file=/home/loginID/.ssh/id_rsa.pub
+
+[alertmanager]
+remoteIP ansible_ssh_private_key_file=/home/loginID/.ssh/id_rsa.pub
+
+[node_exporter]
+remoteIP ansible_ssh_private_key_file=/home/loginID/.ssh/id_rsa.pub
+
+[prometheus]
+remoteIP ansible_ssh_private_key_file=/home/loginID/.ssh/id_rsa.pub
+
+[grafana]
+remoteIP ansible_ssh_private_key_file=/home/loginID/.ssh/id_rsa.pub
